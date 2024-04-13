@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Clase - Estilo Película de los 90s</title>
+    <link rel="stylesheet" href="estilos/esi.css">
+    <link rel="stylesheet" href="estilos/menu.css">
+    <link rel="stylesheet" href="estilos/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Bitácora de Clase</h1>
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="index.html">Tema 1</a></li>
+                <li><a href="tema2.html">Tema 2</a></li>
+                <li><a href="tema3.html">Tema 3</a></li>
+                <li><a href="tema4.html">Tema 4</a></li>
+                <li><a href="tema5.html">Tema 5</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="entry" id="tema1">
+            
+            <article>
+                <h2> Tema 5: zona de contacto </h2>
+                    <p>
+                        La "zona de contacto" dentro de una página web se refiere a la sección o área designada para que los visitantes interactúen y se comuniquen con el propietario del sitio web. </p>
+                        <p>Esta área generalmente incluye elementos como formularios de contacto, información de contacto como dirección de correo electrónico, número de teléfono, dirección física, enlaces a redes sociales, entre otros.</p>
+                 <img src="https://blog.ensalza.com/wp-content/uploads/ealemany-contacto-650x305.jpg" alt="zona de contacto">
+            </article>
+        </section>
+        <section class="entry" id="tema2">
+            <article>
+                <h2>Formularios adaptativos</h2>
+                <p>Al crear formularios adaptativos en CSS, queremos asegurarnos de que los elementos del formulario se ajusten y se vean bien en diferentes tamaños de pantalla.</p>
+                <ul>
+                    <li><b>Unidades relativas:</b> Utiliza porcentajes o vw para tamaños de elementos.</li>
+                    <li><b>Flexbox/Grid:</b> Usa Flexbox o CSS Grid para alinear y distribuir elementos de formulario.</li>
+                    <li><b>Media Queries:</b> Ajusta el diseño según el tamaño de la pantalla con Media Queries.</li>
+                    <li><b>Botones táctiles:</b> Aumenta el tamaño de los botones para dispositivos táctiles.</li>
+                    <li><b>Legibilidad y accesibilidad:</b> Asegúrate de que los elementos del formulario sean legibles y accesibles.</li>
+                </ul>
+                   <img src="https://www.ngeeks.com/wp-content/uploads/2021/04/optimizar-pagina-de-contacto.jpg" alt="Contacto">
+            </article>
+        </section>
+       
+        <section class="entry" id="tema4">
+            <article>
+                <h2>Formulario con boton</h2>
+                <p>Este nos brinda la oportunidad de traer una presentacion diferente ante el usuario de una manera mas ordenada y atractiva, por medio del uso de escripts.
+                <div class="container">
+                    <button id="showForm">Mostrar</button>
+                    <form id="contactForm" class="hidden">
+                      <label for="nombre">Nombre:</label><br>
+                      <input type="text" id="nombre" name="nombre" required><br>
+                      
+                      <label for="email">Correo electrónico:</label><br>
+                      <input type="email" id="email" name="email" required><br>
+                      
+                      <label for="mensaje">Mensaje:</label><br>
+                      <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+                      
+                      <button type="submit">Enviar</button>
+                    </form>
+            </article>
+        </section>
+        <section class="entry" id="tema3">
+            <article>
+                <h2>Label</h2>
+                <p>La etiqueta (label) en HTML se utiliza para asociar un texto descriptivo a un elemento de formulario, como un campo de entrada (input). </p>
+                <p> Esta asociación mejora la accesibilidad y la usabilidad del formulario, ya que permite a los usuarios hacer clic en la etiqueta para activar el campo de entrada correspondiente</p>
+                   <img src="https://javiniguez.com/wp-content/uploads/2019/07/formulario-de-contacto.jpg" alt="label">
+            </article>
+        </section>
+
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+  const showFormButton = document.getElementById('showForm');
+  const contactForm = document.getElementById('contactForm');
+
+  showFormButton.addEventListener('click', function() {
+    showFormButton.style.display = 'none';
+    contactForm.style.display = 'block';
+  });
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Aquí puedes agregar la lógica para enviar el formulario
+    // Por ejemplo, podrías enviar los datos a un servidor con fetch() o XMLHttpRequest
+    alert('Formulario enviado!');
+    // Limpia el formulario después de enviar
+    contactForm.reset();
+    // Oculta el formulario nuevamente
+    contactForm.style.display = 'none';
+    showFormButton.style.display = 'block';
+  });
+});
+
+        </script>
+
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+        
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Ocultar el menú al hacer clic fuera de él
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnMenuToggle = menuToggle.contains(event.target);
+        
+                if (!isClickInsideNav && !isClickOnMenuToggle) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Bitácora de Clase Jaziel Salazar</p>
+    </footer>
+</body>
+</html>
