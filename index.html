@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Clase - Estilo Película de los 90s</title>
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/esi.css">
+    <link rel="stylesheet" href="estilos/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Bitácora de Clase</h1>
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="index.html">Tema 1</a></li>
+                <li><a href="tema2.html">Tema 2</a></li>
+                <li><a href="tema3.html">Tema 3</a></li>
+                <li><a href="tema4.html">Tema 4</a></li>
+                <li><a href="tema5.html">Tema 5</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="entry" id="tema1">
+            
+            <article>
+                <h2> Tema 1: Flexbox</h2><br>
+                <p>Tiene como objetivo proporcionar una manera mas eficiente de diseñar, alinear y distribuir espacio entre los elementos.</p>
+                <p>La idea principal del flexbox es otorgar al contenedor la capacidad de modificar el ancho alto y el orden de sus elementos
+                para llenar mejor el espacio disponible (principalmente para adptarse al tipo de pantalla) </p>
+                <p>Lo mas importante es que el diseño de flexbox es independiente de la direccion en el lugar de los diseños regulares (bloque que se basa verticalmente y en la linea que se basa horizontalmente.) </p>
+                <br><img src="https://i.ytimg.com/vi/RhLxQx4P1oI/maxresdefault.jpg" alt="Tema 1">
+            </article>
+        </section>
+        <section class="entry" id="tema2">
+            <article>
+                <h2>Propiedades</h2><br>
+                <ul>
+                    <li><b>display:</b> Define un contenedor como un contenedor flex o un elemento flex en el flujo de línea.</li><br>
+
+                   <li> <b>flex-direction:</b> Establece la dirección en la que se alinearán los elementos flexibles dentro del contenedor.</li><br>
+                    
+                   <li><b>justify-content:</b> Define cómo se distribuyen los elementos flexibles a lo largo del eje principal del contenedor.</li><br>
+                    
+                   <li><b>align-items:</b> Define cómo se alinean los elementos flexibles a lo largo del eje transversal del contenedor.</li><br>
+                    
+                   <li><b>align-content:</b> Similar a justify-content, pero se aplica a múltiples líneas de elementos flexibles.</li><br>
+                    
+                   <li><b>flex-wrap:</b> Define si los elementos flexibles deben envolverse cuando no caben en una sola línea.</li><br>
+                </ul>
+                    
+                   <p> Estas propiedades te permiten controlar la disposición y alineación de los elementos flexibles dentro de su contenedor de manera efectiva.</P>
+                    <br><img src="https://miro.medium.com/v2/resize:fit:1234/1*GqipNf5YM8ipY-j5riIjqA.png" alt="flexbox froggy">
+            </article>
+        </section>
+        <section class="entry" id="tema3">
+        
+            <article>
+                <h2>Flex grow</h2><br>
+                <img src="https://www.scaler.com/topics/images/flex-grow-css-thumbnail.webp" alt="flex-grow"><br>
+                    <p> El número X indica cuantas unidades de crecimiento crecerá el item. <br>
+                        Por ejemplo, flex-grow: 3; significa que el item crecerá 3 unidades. <br>
+                        Para saber cuanto crecerá un elemento debemos calcular a cuanto corresponde una unidad de crecimiento. 
+                       </p>
+            </article>
+        </section>
+        <section class="entry" id="tema4">
+          
+            <article>
+                <h2>Flex shrink</h2><br>
+                <p> 
+                    Al contrario que la propiedad anterior, con flex-shrink se especifica el comportamiento de los items cuando el tamaño del contenedor es menor al de los ítems que lo componen. 
+                    Por ejemplo, flex-shrink: 3; significa que el item reducirá 3 unidades.</p>
+                    <p> Para saber cuanto se reducirá un elemento debemos calcular a cuanto corresponde una unidad de reducción.</p> 
+                    La formula para calcular el tamaño de una unidad de reducción es la siguiente: 
+                    unidad de reducción = espacio faltante / suma de flex-shrink </p><br>
+                    <img src="https://ishadeed.com/assets/flex-css/flex-shrink-1.png" alt="flex-shrink">
+            </article>
+        </section>
+        
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+        
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Ocultar el menú al hacer clic fuera de él
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnMenuToggle = menuToggle.contains(event.target);
+        
+                if (!isClickInsideNav && !isClickOnMenuToggle) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Bitácora de Clase Jaziel Salazar</p>
+    </footer>
+</body>
+</html>

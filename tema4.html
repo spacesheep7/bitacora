@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Clase - Estilo Película de los 90s</title>
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/esi.css">
+    <link rel="stylesheet" href="estilos/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Bitácora de Clase</h1>
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="index.html">Tema 1</a></li>
+                <li><a href="tema2.html">Tema 2</a></li>
+                <li><a href="tema3.html">Tema 3</a></li>
+                <li><a href="tema4.html">Tema 4</a></li>
+                <li><a href="tema5.html">Tema 5</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="entry" id="tema1">
+            
+            <article>
+                <h2> Tema 4: User agent y reset </h2><br>
+                <p>
+                   <h3>User agent </h3><br>
+                   <img src="https://images.marketpath.com/9dda7041-2870-4a96-bf1e-dd8342e86e7c/p/692f7bc6-6bfd-4f4c-933b-54fd8e88461b/1920wx1080h-max/user-agents-blog-post.png" alt="user agent">
+                   <br> <p>Un user-agent es una aplicación informática que funciona como cliente en un protocolo de red 
+                    • El nombre se aplica generalmente para referirse a aquellas aplicaciones que acceden a la World Wide Web. </p>
+                    
+                   <p> Los agentes de usuario que se conectan a la Web pueden ser desde navegadores web hasta los web crawler de los buscadores, pasando por teléfonos móviles, lectores de pantalla y navegadores en Braille usados por personas con discapacidades.</p> 
+                    
+                    <p>Cuando un usuario accede a una página web, la aplicación generalmente envia una cadena de texto que identifica al agente de usuario ante el servidor. 
+                    Este texto forma parte de la petición a través de HTTP, llevando como prefijo User-agent: o User-Agent: y generalmente incluye información como el nombre de la aplicación, la versión, el sistema operativo, y el idioma. </p>
+                    </p>
+                
+            </article>
+        </section>
+        <section class="entry" id="tema2">
+            <article>
+                <h2>Reset css</h2><br>
+                <p>El consorcio W3C, junto con su especificación de 
+                    CSS 2.1 del 23 de abril de 2009, publicó en su recomendación, un valor por defecto para cada propiedad de CSS que deberian adoptar los agentes de usuario.</p>
+                    Sin embargo, algunos navegadores hicieron caso omiso a sus indicaciones, los diseñadores web se han visto obligados a recurrir al uso de trucos para garantizar la correcta visualización en la mayoría de navegadores. 
+                    
+                    <p>La mayoria de los grandes navegadores como Firefox, Internet Explorer, Opera, Chrome, etc. pueden generar resultados diferentes según la versión. </p>
+                    <p>• Aunque en lE estas diferencias a veces son muy notorias cada navegador tiene sus propias peculiaridades que deben tenerse en cuenta. </p>
+                    
+                  <p>La respuesta está en el restablecimiento de CSS: básicamente, una manera de mantener los resultados lo más universales posible al eliminar cualquier regla y omisión basadas en el navegador antes de que se aplique su CSS. 
+                   </p>
+                   <br> <img src="https://lh4.googleusercontent.com/proxy/4ZjtzCnApbH27A8EHyOWJJtN_zEU7uA-ZA2k5y6d-scfewVOC7hInJF-L2fpR57J9jJ9YWmJO8fqOxvTHpW1DkTh3uUyn2NnZDMVqLNEk6RY9w" alt="Reseset">
+            </article>
+        </section>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+        
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Ocultar el menú al hacer clic fuera de él
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnMenuToggle = menuToggle.contains(event.target);
+        
+                if (!isClickInsideNav && !isClickOnMenuToggle) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Bitácora de Clase Jaziel Salazar</p>
+    </footer>
+</body>
+</html>
