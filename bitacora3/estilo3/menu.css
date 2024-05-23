@@ -76,8 +76,8 @@ a:hover {
 }
 /*animacion*/
 svg {
-    width:400px;
-    height: 350px;
+    width:100%;
+    height: auto;
   }
   
   path {
