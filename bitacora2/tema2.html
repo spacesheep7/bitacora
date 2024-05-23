@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Clase - Estilo Película de los 90s</title>
+    <link rel="stylesheet" href="estilos2/reset.css">
+    <link rel="stylesheet" href="estilos2/esi.css">
+    <link rel="stylesheet" href="estilos2/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../menu.html"><h1>Bitácora de Clase</h1></a> 
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="index.html">Tema 1</a></li>
+                <li><a href="tema2.html">Tema 2</a></li>
+                <li><a href="tema3.html">Tema 3</a></li>
+                <li><a href="tema4.html">Tema 4</a></li>
+                <li><a href="tema5.html">Tema 5</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="entry" id="tema1">
+            
+            <article>
+                <h2> Tema 2: Propiedades personalizadas</h2><br>
+                <p>
+                    Una propiedad personalizada en CSS, también conocida como variable CSS o variable personalizada,
+                    es un tipo de variable definida por el usuario que puede contener un valor específico y ser reutilizada en todo el documento CSS.
+                    Estas variables son definidas por el usuario y pueden tener cualquier nombre que desees, comenzando con dos guiones seguidos por el nombre de la variable </p>
+                    <br><img src="https://www.jesustovar.es/wp-content/uploads/2022/04/propiedades-personalizadas-variables-en-css.jpg" alt="Propiedades personalizadas">
+            </article>
+        </section>
+        <section class="entry" id="tema2">
+            <article>
+                <h2>Nombre de variables</h2><br>
+                <p>Se declaran con la siguiente sintaxis: 
+                    -nombre: valor; 
+                    • Y se invocan mediante la función var(), por ejemplo 
+                    propiedad: var (-nombre); <br>
+                    • Los nombres de las variables CSS distinguen entre mayúsculas y minúsculas, por ejemplo:  <br>
+                    --my-color  <br>
+                    --My-color  <br>
+                    • Son variables distintas. 
+                    
+                    • Es importante el uso de identificadores semánticos. Por ejemplo:  <br>
+                    ~main-text-color  <br>
+                    • De esta forma será más fácil de entender que:  <br>
+                    -color  
+                   </p>
+            </article>
+        </section>
+        <section class="entry" id="tema3">
+        
+            <article>
+                <h2>Alcance de variables</h2><br>
+                <img src="https://www.mamutlove.com/images/posts/1/colour-palette.png" alt="Alcance"><br>
+                    <p>  El alcance (ámbito) en el que podremos usar la variable, dependerá del selector donde se declare la variable.•  
+                        Una buena práctica es declarar variables en la pseudo-clase root, y asi aplicarlas globalmente al documento HTML: 
+                         root f 
+                         -main-bg-color: brown; 
+                       </p>
+            </article>
+        </section>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+        
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Ocultar el menú al hacer clic fuera de él
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnMenuToggle = menuToggle.contains(event.target);
+        
+                if (!isClickInsideNav && !isClickOnMenuToggle) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Bitácora de Clase Jaziel Salazar</p>
+    </footer>
+</body>
+</html>

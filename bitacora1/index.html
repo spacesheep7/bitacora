@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Clase - Estilo Película de los 90s</title>
+    <link rel="stylesheet" href="estilos1/esi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../menu.html"><h1>Bitácora de Clase</h1></a> 
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="index.html">Tema 1</a></li>
+                <li><a href="tema2.html">Tema 2</a></li>
+                <li><a href="tema3.html">Tema 3</a></li>
+                <li><a href="temas4.html">Tema 4</a></li>
+                <li><a href="tema5.html">Tema 5</a></li>
+                <li><a href="tema6.html">Tema 6</a></li>
+                <li><a href="tema7.html">Tema 7</a></li>
+                <li><a href="tema8.html">Tema 8</a></li>
+                <li><a href="tema9.html">Tema 9</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="entry" id="tema1">
+            <img src="https://static.semrush.com/blog/uploads/media/e6/b7/e6b7699595cb741570c9b385fa8f7971/javascript.svg" alt="Tema 1">
+            <article>
+                <h2> Tema 1: Js conceptos basicos</h2>
+                <h3></h3>
+                <p>JavaScript es un lenguaje de programación orientado a objetos derivado del estándar ECMAScript.
+                    Fue inicialmente desarrollado por Brendan Eich de Netscape bajo el nombre de Mocha, luego renombrado a LiveScript y finalmente JavaScript.
+                    Su cambio de nombre coincidió con la adición de compatibilidad con Java en el navegador de Netscape en 1995. Aunque su nombre sugiere una relación con Java, tienen propósitos y semánticas diferentes.
+                    En 1997, fue propuesto como estándar por la ECMA y adoptado como ECMAScript, también como estándar ISO poco después. JavaScript tiene una sintaxis similar a C pero adopta convenciones de Java.
+                    Se utiliza principalmente en el lado del cliente de las aplicaciones web para mejorar la interfaz de usuario y la interactividad. Desde 2012, todos los navegadores modernos admiten ECMAScript 5.1, mientras que los más antiguos al menos soportan ECMAScript 3.
+                    Se puede integrar JavaScript en HTML directamente o en archivos separados para su funcionamiento conjunto.</p>
+                    <h3>Agregar JavaScript directamente</h3>
+                    <p>Para insertar JS de forma directa en HTML se utiliza la etiqueta script script, el código JS debe quedar dentro de esta etiqueta. 
+                        El código IS se puede colocar dentro de: 
+                            La etiqueta  head 
+                            La etiqueta «body» 
+                        Dependiendo de dónde se agregue el código JS en el archivo HTML, la carga será diferente. Por lo general se recomienda agregario en el «head» para que permanezca separado del contenido HTML 
+                        Pero colocarlo dentro de «body puede ayudar a mejorar la velocidad de carga, ya que el contenido del sitio web se cargará más rápido, y solo después de eso se procesará el 
+                        JavaScript.  </p>
+                   
+            </article>
+        </section>
+        <section class="entry" id="tema2">
+          <img src="https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript/execution.png" alt="javascript">
+            <article>
+                <h2>Agregar JavaScript en un archivo separado</h2>
+                <p>Insertar JavaScript directamente en HTML puede no ser la mejor opción, especialmente si se necesitan scripts en múltiples páginas.
+                    Es preferible mantener el código JS en archivos separados y referenciarlos de manera similar a los documentos CSS.
+                    Algunos beneficios de esta práctica incluyen la separación de HTML y JavaScript para una mayor sostenibilidad y reutilización, una mejor legibilidad y mantenimiento del código, y un rendimiento mejorado del sitio web gracias a la caché de los archivos JavaScript</p>
+            </article>
+        </section>
+        <section class="entry" id="tema3">
+           <img src="https://www.creativefabrica.com/wp-content/uploads/2020/09/08/Cardboard-boxes-collection-design-Graphics-5355773-2-580x386.png" alt="variables">
+            <article>
+                <h2>Variables en Java</h2>
+                    <p>Las variables en JavaScript son contenedores para almacenar valores de datos y deben tener nombres únicos llamados identificadores, que pueden ser cortos o descriptivos. Se utilizan var, let y const para crear variables.</p>
+                   <p><b>var:</b> Se utiliza para declarar una nueva variable y asignarle un valor. </p> 
+                   <p><b>let:</b>  Indica que la variable puede ser reasignada a un valor diferente. <br></p> <p>También puede declarar una variable sin asignarle un valor, en cuyo caso se inicializa como undefined. <br></p> 
+                   <p><b>const: </b>Abreviatura de "constante", se utiliza para declarar una variable cuyo valor no puede ser reasignado. Intentar reasignar una variable const resultará en un TypeError.</p>
+            </article>
+        </section>
+        <section class="entry" id="tema4">
+          <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--pClJgvrv--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/mt2jlra7jd5gdgl8up8y.png" alt="">
+            <article>
+                <h2>Funciones</h2>
+                <p>Las funciones son esenciales en JavaScript, siendo procedimientos que realizan tareas o calculan valores. <p> Se declaran y luego se ejecutan cuando son llamadas por algún evento, código JavaScript o automáticamente.</p> La sintaxis para declarar funciones es:
+                    <p>
+                    javascript
+                    Copy code
+                    function nombre(parametros) {
+                      // Instrucciones
+                    }</p>
+                    El código dentro de la función se ejecuta cuando es invocada. Esto puede ocurrir en respuesta a eventos, como clics en botones, llamadas desde código JavaScript, o automáticamente mediante auto-invocación. Ejemplos incluyen:
+                    <br>
+                  
+                    <button type="button" onclick="miFuncion()">Click aquí</button></p>
+
+            </article>
+        </section>
+        <section class="entry" id="tema5">
+          <img src="" alt="">
+            <article>
+                <h2>Tipos de datos</h2>
+                <img src="https://patoreguera.com/wp-content/uploads/2023/01/code_20230107184301_via_10015_io.png" alt="">
+               
+            </article>
+        </section>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+        
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Ocultar el menú al hacer clic fuera de él
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnMenuToggle = menuToggle.contains(event.target);
+        
+                if (!isClickInsideNav && !isClickOnMenuToggle) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Bitácora de Clase Jaziel Salazar</p>
+    </footer>
+</body>
+</html>

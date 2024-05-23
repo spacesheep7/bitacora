@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Clase </title>
+    <link rel="stylesheet" href="estilo3/reset.css">
+    <link rel="stylesheet" href="estilo3/esi.css">
+    <link rel="stylesheet" href="estilo3/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../menu.html"><h1>Bitácora de Clase</h1></a> 
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="index.html">Tema 1</a></li>
+                <li><a href="tema2.html">Tema 2</a></li>
+                <li><a href="tema3.html">Tema 3</a></li>
+                <li><a href="tema4.html">Tema 4</a></li>
+                <li><a href="tema5.html">Tema 5</a></li>
+                <li><a href="tema6.html">Tema 6</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="entry" id="tema1">
+            
+            <article>
+                <h2> Frameworks </h2><br>
+            <p>Los frameworks se utilizan en el ámbito de la programación de aplicaciones desde hace décadas.
+                Recientemente se han usado para programar y diseñar aplicaciones web, por lo que ya existen decenas de frameworks para CSS.
+                Que son </p>
+              <p>• Un framework es un conjunto de herramientas, librerías, convenciones y buenas prácticas que pretenden encapsular las tareas repetitivas en módulos genéricos fácilmente reutilizables.</p>
+                   <img src="https://invedus.com/blog/wp-content/uploads/2022/11/what-is-a-framework-and-why-use-it-software-development.jpg" alt="Frameworks">
+            </article>
+        </section>
+        <section class="entry" id="tema2">
+            <article>
+                <h2>Materialize</h2><br>
+                <img src="https://gspsites.com/wp-content/uploads/2021/03/o-que-e-Materialize-1030x440.jpg.webp" alt="Materialize">
+                   <b><p>Ventajas de Materialize CSS: </p></b>
+                        <ul>
+                            <li> Facilidad de uso: Permite diseñar sitios web atractivos con menos esfuerzo y código.</li>
+                            <li> Responsividad: Ofrece un diseño responsivo por defecto, adaptándose a diferentes dispositivos.</li>
+                            <li>Componentes predefinidos: Proporciona una amplia variedad de componentes listos para usar, como tarjetas, modales, formularios, etc.</li>   
+                            <li>Grid System: Utiliza un sistema de cuadrícula flexible que facilita el diseño y la disposición de elementos en la página.</li>  
+                            <li>Personalización: Permite personalizar fácilmente el aspecto de los elementos mediante clases predefinidas o reglas CSS personalizadas.</li>  
+                        </ul>
+
+                  
+                   <br> 
+            </article>
+        </section>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+        
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Ocultar el menú al hacer clic fuera de él
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnMenuToggle = menuToggle.contains(event.target);
+        
+                if (!isClickInsideNav && !isClickOnMenuToggle) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Bitácora de Clase Jaziel Salazar</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Clase </title>
+    <link rel="stylesheet" href="estilo3/reset.css">
+    <link rel="stylesheet" href="estilo3/esi.css">
+    <link rel="stylesheet" href="estilo3/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../menu.html"><h1>Bitácora de Clase</h1></a> 
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="index.html">Tema 1</a></li>
+                <li><a href="tema2.html">Tema 2</a></li>
+                <li><a href="tema3.html">Tema 3</a></li>
+                <li><a href="tema4.html">Tema 4</a></li>
+                <li><a href="tema5.html">Tema 5</a></li>
+                <li><a href="tema6.html">Tema 6</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="entry" id="tema1">
+            <article>
+                <h2> Etapa de Desarrollo</h2><br>
+                    <p>
+                        La etapa de desarrollo en un proyecto de diseño para una página web es fundamental, ya que es cuando las ideas y planes elaborados durante la fase de planeación se convierten en realidad. 
+                    </p>
+            </article>
+            
+        </section>
+        <section class="entry" id="tema2">
+            <article>
+                <h2> Etapas del proceso del de Desarrollo</h2><br>
+                <h3>Configuración del entorno de desarrollo</h3>
+                    <p>Crear la interfaz de usuario (UI) del sitio web utilizando tecnologías como HTML, CSS y JavaScript. Esto incluye el diseño responsivo para asegurar que el sitio funcione bien en dispositivos de diferentes tamaños.</p>
+                    <p>Define la apariencia y la interacción del usuario con el sitio, asegurando una experiencia visualmente atractiva y funcional..</p><br>
+                   <br>
+                <h3>Desarrollo del front-end</h3>
+                    <p> Representaciones estáticas de las páginas web que muestran el diseño visual completo, incluyendo colores, tipografía, imágenes y elementos gráficos.</p>
+                    <p>Proporciona una vista precisa de la apariencia final del sitio, permitiendo obtener retroalimentación visual antes del desarrollo.</p><br>
+                    <img src="https://kinsta.com/es/wp-content/uploads/sites/8/2021/12/front-end-developer-1024x512.png" alt="front end">
+                <h3>Desarrollo del back-end</h3>
+                    <p>Implementar la lógica del servidor, bases de datos y otros componentes necesarios para el funcionamiento del sitio web. Utiliza tecnologías como Node.js, Python, PHP, Ruby on Rails, etc.</p>
+                    <p>Gestiona el procesamiento de datos, la lógica de negocio y la integración con otras aplicaciones o servicios, asegurando que el sitio funcione correctamente y de manera segura.</p><br>
+                    <img src="https://digitalnestweb.com/wp-content/uploads/2022/10/Desarrollo-Web-Backend.png" alt="back-end"><br>
+                <h3>Documentación del código y del proyecto:</h3>
+                    <p>Crear documentación detallada sobre el código, la arquitectura del sitio y las decisiones técnicas.</p>
+                    <p>Facilita el mantenimiento futuro, permite que otros desarrolladores entiendan el proyecto y asegure una transición suave si se realizan cambios en el equipo de desarrollo.</p><br>
+                    <img src="https://i0.wp.com/micr-sai.com.mx/wp-content/uploads/2021/06/control-de-documentos-2.jpg?resize=1024%2C484&ssl=1" alt="Documentacion">
+                <h3>Pruebas y aseguramiento de la calidad </h3>
+                    <p>Realizar pruebas exhaustivas para identificar y corregir errores o problemas en el sitio web. Esto incluye pruebas de funcionalidad, usabilidad, rendimiento, seguridad y compatibilidad en diferentes navegadores y dispositivos.</p>
+                    <p> Garantiza que el sitio web funcione correctamente y proporcione una experiencia de usuario satisfactoria, reduciendo la posibilidad de problemas tras el lanzamiento.</p>
+                   
+            </article>
+        </section>
+       
+
+
+
+        <!-- menu javascript-->
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+        
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Ocultar el menú al hacer clic fuera de él
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnMenuToggle = menuToggle.contains(event.target);
+        
+                if (!isClickInsideNav && !isClickOnMenuToggle) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Bitácora de Clase Jaziel Salazar</p>
+    </footer>
+</body>
+</html>

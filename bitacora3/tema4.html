@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Clase - Estilo Película de los 90s</title>
+    <link rel="stylesheet" href="estilo3/reset.css">
+    <link rel="stylesheet" href="estilo3/esi.css">
+    <link rel="stylesheet" href="estilo3/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Workbench&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../menu.html"><h1>Bitácora de Clase</h1></a> 
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="index.html">Tema 1</a></li>
+                <li><a href="tema2.html">Tema 2</a></li>
+                <li><a href="tema3.html">Tema 3</a></li>
+                <li><a href="tema4.html">Tema 4</a></li>
+                <li><a href="tema5.html">Tema 5</a></li>
+                <li><a href="tema6.html">Tema 6</a></li>
+             
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="entry" id="tema1">
+            <article>
+                <h2> Etapa de planeacion</h2><br>
+                    <p>
+                        La etapa de planeación en un proyecto de diseño para una página web es crucial para garantizar que el proyecto se desarrolle de manera eficiente y que el producto final cumpla con las expectativas y objetivos.
+                    </p><img src="https://i2.wp.com/zoologic-d.com/blog/wp-content/uploads/2017/08/Planeaci%C3%B3n-estrat%C3%A9gica-su-concepto-e-importancia.jpg?fit=1068%2C712&ssl=1" alt="" width="30%">
+            </article>
+            
+        </section>
+        <section class="entry" id="tema2">
+            <article>
+                <h2> Etapas de la planeacion</h2><br>
+                <h3> Definición de objetivos</h3>
+                    <p>Establecer claramente lo que se desea lograr con la página web.</p>
+                    <p>Ayuda a alinear todos los esfuerzos y decisiones con el propósito final, asegurando que el sitio web cumpla con las metas de negocio o personales.</p><br>
+                    <img src="https://www.mayaccess.com.mx/wp-content/uploads/2023/03/importanciadeplanear.png" alt="objetivos"><br>
+                <h3>Identificación del público</h3>
+                    <p> Determinar quiénes serán los usuarios del sitio web, sus necesidades, comportamientos y preferencias.</p>
+                    <p>Permite diseñar una experiencia de usuario (UX) centrada en las expectativas y necesidades de los usuarios, mejorando la usabilidad y satisfacción.</p><br>
+                    <img src="https://www.mastermarketing-valencia.com/ventas-y-gestion-comercial/wp-content/uploads/sites/3/2020/11/Que-es-publico-objetivo.jpg" alt="publico">
+                <h3>Investigación y análisis competitivo (benchmarking)</h3>
+                    <p>Analizar otras páginas web similares en el mercado para identificar fortalezas, debilidades y oportunidades.</p>
+                    <p>Proporciona información valiosa para diferenciarse de la competencia y adoptar las mejores prácticas del sector.</p><br>
+                    <img src="https://www.questionpro.com/blog/wp-content/uploads/2018/02/198-Portada-benchmarking.jpg" alt="benchmarking"><br>
+                <h3>Definición del contenido y estructura del sitio:</h3>
+                    <p>Planificar qué contenido se incluirá en el sitio y cómo se organizará (sitemap).</p>
+                    <p>Garantiza que la información esté organizada de manera lógica y accesible, mejorando la navegación y la experiencia del usuario.</p><br>
+                <h3>Creación de wireframes y prototipos</h3>
+                    <p>Desarrollar esquemas básicos (wireframes) y prototipos más detallados del diseño y la funcionalidad del sitio.</p>
+                    <p>Permite visualizar la estructura y el flujo del sitio antes de invertir tiempo y recursos en el desarrollo completo, facilitando ajustes tempranos.</p>
+                    <img src="https://balsamiq.com/assets/learn/articles/mobile-web.png" alt="">
+            </article>
+        </section>
+       
+
+
+
+        <!-- menu javascript-->
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+        
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        
+            // Ocultar el menú al hacer clic fuera de él
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = nav.contains(event.target);
+                const isClickOnMenuToggle = menuToggle.contains(event.target);
+        
+                if (!isClickInsideNav && !isClickOnMenuToggle) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Bitácora de Clase Jaziel Salazar</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú bitacora</title>
+    <link rel="stylesheet" href="estilosmenu/stylesmenu.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="menu-item" onclick="animateMenu(this)">
+           <a href="bitacora1/index.html"> <h2>Bitacora 1</h2></a>
+        </div>
+        <div class="menu-item" onclick="animateMenu(this)">
+            <a href="bitacora2/index.html"> <h2>Bitacora 2</h2></a>
+        </div>
+        <div class="menu-item" onclick="animateMenu(this)">
+            <a href="bitacora3/index.html"> <h2>Bitacora 3</h2></a>
+        </div>
+    </div>
+    <script >function animateMenu(element) {
+        element.style.transform = "scale(1.1)";
+        setTimeout(() => {
+            element.style.transform = "scale(1)";
+        }, 300);
+    }
+    </script>
+</body>
+</html>
